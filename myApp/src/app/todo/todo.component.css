@@ -1,0 +1,44 @@
+.arrange{
+    margin-left:50%;
+    margin-top:10%
+    }
+
+
+.edit{
+    width:400px;
+    height:50px;
+background-color:rgb(219, 217, 217);
+margin-top:5px;
+padding-left:0px;
+}
+.edits{
+    width:460px;
+    height:50px;
+background-color:rgb(219, 217, 217);
+margin-top:5px;
+padding-left:0px;
+}
+
+.editbutton{
+    width:400px;
+    height:50px;
+    padding-left:0px;
+}
+
+span{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.btn.btn-success{
+   width:460px;
+    background-color:rgb(47, 111, 145);
+    
+}
+.buttonclass{
+    height:50px;
+    margin-top:5px;
+}
+.btn.btn-xs{
+    background-color:rgb(47, 111, 145);
+    border:0
+}
+

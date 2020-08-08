@@ -1,0 +1,9 @@
+<app-topbar></app-topbar>
+<div class="register">
+<h3>Register</h3>
+<form>
+    <input type="text" placeholder="username" [(ngModel)]="user.username" name="username">
+    <input type="password" placeholder="password" [(ngModel)]="user.password" name="password">
+    <button (click)="register()">Submit</button>
+</form>
+</div>
