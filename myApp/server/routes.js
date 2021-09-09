@@ -19,13 +19,8 @@ router.get("/todos",isLoggedIn,function(req,res){
 router.post("/todos",isLoggedIn,function(req,res){
   
     var text=req.body.text;
-    var author={
-        id:req.user._id,
-        username:req.user.username
-    }
     var newTodo={
         text:text,
-        author:author
     }
     Todo.create(newTodo,function(err,newlyTodo){
         if(err){
@@ -33,7 +28,7 @@ router.post("/todos",isLoggedIn,function(req,res){
             res.send("Error")
         }
        else{
-console.log(newlyTodo.author);
+
            res.send(newlyTodo);
        }
     

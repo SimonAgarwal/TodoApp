@@ -2,19 +2,33 @@ var express= require('express');
 
 var bodyParser=require('body-parser');
 var cors=require('cors');
+const path=require('path');
 var mongoose= require('mongoose');
 var passport=require("passport");
 var LocalStrategy=require("passport-local");
 var app=express();
 var routes=require('./routes');
-mongoose.connect('mongodb://localhost:27017/Todo');
+const config=require("./config/mongoose");
+mongoose.connect(config.database,{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.on('connected',()=>{
+    console.log("Connected to database"+config.database);
+})
+mongoose.connection.on('error',(err)=>{
+    console.log("Not connected"+err);
+})
 
 //models
 var User=require('./users');
 //config other
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors({credentials:true,origin:'http://localhost:4200'}))
+app.use(cors({credentials:true,origin:'http://localhost:4200'}));
+app.use(express.static('public'));
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,
+        'public/index.html'))
+})
+
 //session
 app.use(require("express-session")({
     secret:"anything",
@@ -32,6 +46,6 @@ passport.deserializeUser(User.deserializeUser());
 //routes
 app.use(routes);
 
-app.listen(3000,function(req,res){
+app.listen(process.env.PORT,function(req,res){
     console.log("Server Started");
 })

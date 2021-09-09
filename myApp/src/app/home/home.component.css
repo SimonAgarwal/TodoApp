@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+div#home-image{
+width:100%;
+height: 100vh;
+background-image: url('../../assets/home-2.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+div#home-image>div>p{
+    font-weight: 700;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;;
+}
+div#home-image>div>button{
+    margin-left: 150px;
+}

@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Dancing+Script:wght@700&display=swap');
 .arrange{
-    margin-left:50%;
+    padding-left:25%;
     margin-top:10%
     }
 
@@ -17,28 +18,42 @@ padding-left:0px;
 background-color:rgb(219, 217, 217);
 margin-top:5px;
 padding-left:0px;
+font-family: 'Crimson Text', serif;
+
+
+
 }
 
 .editbutton{
     width:400px;
     height:50px;
     padding-left:0px;
+   
 }
 
-span{
-    font-family: 'Josefin Sans', sans-serif;
+h3{
+    font-family: 'Crimson Text', serif;
+     font-size:30px;
 }
 .btn.btn-success{
    width:460px;
-    background-color:rgb(47, 111, 145);
-    
+    background-color:#121212;
+    font-size:25px;
 }
 .buttonclass{
     height:50px;
     margin-top:5px;
 }
 .btn.btn-xs{
-    background-color:rgb(47, 111, 145);
-    border:0
+    background-color:#121212;
+    border:0;
+    
+}
+.edit.d-flex.justify-content-center.row.font{
+    font-family: 'Crimson Text', serif;
+     font-size:20px;
+}
+.updatecolor{
+    color:#121212;
 }
 

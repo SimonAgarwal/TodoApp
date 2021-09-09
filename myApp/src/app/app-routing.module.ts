@@ -9,10 +9,11 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [{path: '', redirectTo: "/home",pathMatch: 'full'},
                         {path:'home',component:HomeComponent},
-                        {path:'login',component:LoginComponent},
-                        {path:'todo',component:TodoComponent,canActivate:[AuthGuard]},
-                        {path:'register',component:RegisterComponent}
+                       // {path:'login',component:LoginComponent},
+                        {path:'todo',component:TodoComponent},
+                       // {path:'register',component:RegisterComponent}
                       ];
+                      //canActivate:[AuthGuard]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

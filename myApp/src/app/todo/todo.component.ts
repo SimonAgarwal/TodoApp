@@ -12,11 +12,7 @@ export class TodoComponent implements OnInit {
   allItems:items[];
   item:items={
     _id:"",
-    text:"",
-    author:{
-    id:"",
-    username:""
-    }
+    text:""
   };
   text:string;
   active={
@@ -65,9 +61,6 @@ this.item.text=this.text;
 }
 AddItem(){
   this.item.text=this.text;
-  this.item.author.id=this._api.active._id;
-  this.item.author.username=this._api.active.username;
-  console.log(this._api.active)
   console.log(this.item);
   this._api.postItems(this.item).subscribe((res)=>{
     this.TodoItems();

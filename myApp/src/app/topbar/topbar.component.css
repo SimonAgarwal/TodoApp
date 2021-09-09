@@ -1,3 +1,7 @@
-.navbar-light.fixed-top{
-    background:rgb(47, 111, 145)
+.navbar-dark.fixed-top{
+    background:#121212
+}
+.nav-link{
+    font-weight: 500;
+    font-size:20px;
 }

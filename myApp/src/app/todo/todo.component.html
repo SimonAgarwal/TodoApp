@@ -7,7 +7,7 @@
   </div>
    <div *ngFor="let item of allItems">
       <div class="row">
-      <div class="edit d-flex justify-content-start row">
+      <div class="edit d-flex justify-content-center row font" >
         {{item.text}}
        </div>
       <div class="d-flex justify-content-center buttonclass">
@@ -36,9 +36,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
          </div>
         <div class="modal-body">
-          <h3 class="text-warning">Update Todo Item</h3>
+          <h3 class="updatecolor">Update Todo Item</h3>
         
-         <input type="text"  class="border-warning" [(ngModel)]="text">
+         <input type="text"  class="border-dark" [(ngModel)]="text">
           <div class="icon-edit">
           <i class="check circle icon"></i>
         </div>
@@ -65,14 +65,14 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
            </div>
           <div class="modal-body">
-            <h3 class="text-warning">ADD A TODO</h3>
-           <input type="text" [(ngModel)]="text" placeholder="Next thing todo" class="border-warning">
+            <h3 class="text-dark">ADD A TODO</h3>
+           <input type="text" [(ngModel)]="text" placeholder="Next thing todo" class="border-dark">
             <div class="icon-edit">
             <i class="check circle icon"></i>
           </div>
           </div>
           <div class="modal-footer">
-            <button type="button"  data-dismiss="modal" (click)="AddItem()" class="btn btn-warning">Add</button>
+            <button type="button"  data-dismiss="modal" (click)="AddItem()" class="btn btn-primary">Add</button>
       
           </div>
         </div>
