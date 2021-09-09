@@ -22,7 +22,7 @@ export class TodoComponent implements OnInit {
   constructor(private _api:ApiService){}
   ngOnInit(): void {
     this.TodoItems();
-    console.log(this._api.active.username);
+    //console.log(this._api.active.username);
     console.log(this.active);
   }
 
