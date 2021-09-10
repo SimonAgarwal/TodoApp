@@ -1,4 +1,4 @@
 module.exports={
-    database: process.env.DB_HOST,
-   secret:process.env.DB_SECRET
+    database: 'mongodb+srv://Admin:simon@cluster0.jujtp.mongodb.net/Todo?retryWrites=true&w=majority',
+   secret:'SecretSimon'
 }
