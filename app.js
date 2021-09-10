@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors({credentials:true,origin:'http://localhost:4200'}));
 app.use(express.static('public'));
 app.get('*',(req,res)=>{
-    res.sendFile((__dirname,'public'))
+    res.sendFile('public/index.html')
 })
 
 //session
