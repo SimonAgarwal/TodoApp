@@ -25,9 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors({credentials:true,origin:'http://localhost:4200'}));
 app.use(express.static('public'));
-app.get('*',(req,res)=>{
-    res.sendFile('public/index.html')
-})
+
 
 //session
 app.use(require("express-session")({
@@ -45,6 +43,9 @@ passport.deserializeUser(User.deserializeUser());
 
 //routes
 app.use(routes);
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'public/index.html'))
+})
 
 app.listen(process.env.PORT,function(req,res){
     console.log("Server Started");
