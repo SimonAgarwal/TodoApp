@@ -38,7 +38,7 @@
         <div class="modal-body">
           <h3 class="updatecolor">Update Todo Item</h3>
         
-         <input type="text"  class="border-dark" [(ngModel)]="text">
+         <input type="text"  class="border-dark" [(ngModel)]="text" [value]="todoItem">
           <div class="icon-edit">
           <i class="check circle icon"></i>
         </div>
@@ -65,7 +65,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
            </div>
           <div class="modal-body">
-            <h3 class="text-dark">ADD A TODO</h3>
+            <h3 class="text-dark">Add a Todo</h3>
            <input type="text" [(ngModel)]="text" placeholder="Next thing todo" class="border-dark">
             <div class="icon-edit">
             <i class="check circle icon"></i>

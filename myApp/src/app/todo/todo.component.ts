@@ -18,7 +18,7 @@ export class TodoComponent implements OnInit {
   active={
     id:""
   }
-
+todoItem="";
   constructor(private _api:ApiService){}
   ngOnInit(): void {
     this.TodoItems();
@@ -48,6 +48,7 @@ toDelete(item){
 toUpdateItem(item){
 this.item=item;
 console.log(this.item);
+this.todoItem=this.item.text
 }
 toUpdate(){
 this.item.text=this.text;
