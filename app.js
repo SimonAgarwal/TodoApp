@@ -43,9 +43,9 @@ passport.deserializeUser(User.deserializeUser());
 
 //routes
 app.use(routes);
-app.use(express.static(__dirname + '/dist/myApp'));
-app.get('/*', function(req,res) {
-res.sendFile(path.join(__dirname + '/dist/myApp/index.html'));
+app.use(express.static(path.join(__dirname,'public')));
+app.get('*', function(req,res) {
+res.sendFile(path.join(__dirname + 'publicindex.html'));
 
 });
 
