@@ -44,7 +44,7 @@ passport.deserializeUser(User.deserializeUser());
 //routes
 app.use(routes);
 app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'myApp/dist/index.html'))
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 
 app.listen(process.env.PORT,function(req,res){
