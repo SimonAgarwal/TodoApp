@@ -43,9 +43,11 @@ passport.deserializeUser(User.deserializeUser());
 
 //routes
 app.use(routes);
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
+app.use(express.static(__dirname + '/dist/myApp'));
+app.get('/*', function(req,res) {
+res.sendFile(path.join(__dirname + '/dist/myApp/index.html'));
+
+});
 
 app.listen(process.env.PORT,function(req,res){
     console.log("Server Started");
